@@ -7,9 +7,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'open_sanslight';
     src: url('fonts/opensans-light-webfont.woff2') format('woff2'),
@@ -40,6 +37,7 @@ section {
 aside{
   float: left;
   width: 30%;
+  margin: 0 auto;
 }
 
 nav{
@@ -58,8 +56,8 @@ header, section, aside, nav, footer{
 /* header and footer*/
 
 header, footer{
-  border-top: 5px solid #a66;
-  border-bottom: 5px solid #a66;
+  background-color: #a66;
+  color: white;
 }
 
 /* Your code below*/
@@ -89,9 +87,7 @@ p:first-of-type{
 }
 
 a:link{
-
   color: #6681aa;
-  font-weight: bold;
   outline: none;
 }
 
@@ -106,7 +102,7 @@ a:focus{
 
 a:hover{
   background-color: #a66;
-  color: white;
+  color: red;
   text-decoration: none;
 }
 
@@ -115,6 +111,38 @@ a:active{
   color: #a66;
 }
 
-a* (href="https//"){
+ a[href*="#"], a[href*="https://"]{
+  background: url('external-link-52.png') no-repeat 100%;
+  background-size: 10px 10px;
+  padding-right: 12px;
+}
 
+ul{
+  position: relative;
+  margin-top: -2px;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav a:link{
+  border: 1px solid #a66;
+  text-decoration: none;
+  padding: 25px;
+  line-height: 5;
+  background-color: white;
+  foint-size: 20px;
+}
+
+nav  li:first-child{
+  padding-top: 0;
+}
+
+section, aside, nav{
+  padding: 0;
+}
+
+body{
+  width: 100%;
 }
