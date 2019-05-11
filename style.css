@@ -1,7 +1,7 @@
 /* General setup */
 
 *{
-  body-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -74,7 +74,7 @@ fonts imported from fontsquirrel.
 /*typography stuff*/
 
 html{
-  font-family: font-family: 'open_sanslight', sans-serif,serif;
+  font-family: 'open_sanslight', sans-serif,serif;
   font-size:10px;
 }
 
@@ -105,18 +105,17 @@ section h2 + p{
 
 /*Link styling*/
 
-a:link{
-  color: #6681aa;
+a{
   outline: none;
 }
 
-a[href*="https://"]{
-  background: url('external-link-52.png') no-repeat 100%;
-  background-size: 10px 10px;
-  padding-right: 12px;
+a[href*="https:"]{
+  padding-right: 19px;
+  background: url(external-link-52.png) no-repeat 100% 0;
+  background-size: 16px 16px;
 }
 
-a:visited{
+a:link, a:visited{
   color: #a66;
 }
 
@@ -125,8 +124,8 @@ a:focus, a:hover{
 }
 
 a:active{
-  background-color: #a66;
   color: white;
+  background-color: #a66;
 
 
 
@@ -136,7 +135,7 @@ a:active{
 always have the same spacing as with paragraphs */
 
 ul, ol{
-  margin-top: -2px;
+  margin: 1.6rem 0;
 }
 
 ul{
@@ -152,13 +151,16 @@ ol{
 nav ul{
   padding-left: 0;
   margin-top: 0.8rem;
-  list-style-type:none;
 }
 
-nav li a:link{
+nav li{
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+nav li a{
   text-decoration: none;
   display: inline-block;
-  margin-bottom: 2rem;
   width:100%;
   line-height: 3;
   text-align: center;
@@ -174,17 +176,4 @@ nav li a:focus, nav li a:hover {
 nav li a:active {
   color: white;
   background: black;
-}
-
-nav  li:first-child{
-  padding-top: 15px;
-}
-
-section, aside, nav{
-  padding: 0;
-}
-
-body{
-  width: 96%;
-  margin-left: 0 auto;
 }
